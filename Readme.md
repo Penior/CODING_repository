@@ -1,8 +1,11 @@
 # Information about me #
-Development student : Penior \n
-Age : 16 ( 2006. 12. 02 ) \n
-Sex : male \n
-Nationality : Korea \n
+Development student : Penior
+
+Age : 16 ( 2006. 12. 02 )
+
+Sex : male
+
+Nationality : Korea
 
 # How to commit? #
 1. add file which have text.
