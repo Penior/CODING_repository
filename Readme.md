@@ -12,7 +12,6 @@
 5. git push
 
 or 
-vaasasv
 
 1. git commit -am "{text}"
 2. git push
