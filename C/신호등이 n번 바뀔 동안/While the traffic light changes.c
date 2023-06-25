@@ -20,20 +20,18 @@ int main() {
     sleep(2);
     printf(" \" 신호등이 %d번 바뀔동안 ...... \" \n\n", change);
     sleep(2);
-    if(change < 15) printf("hi");
     if(change == 0) {
         printf("\n 잠깐! 신호등이 %d번 바뀔동안 기다린다면 ...... \n %d초 동안 기다리게 됩니다! \n", change, change*200);
     }
-    if(0 < change, change < 15) {
-        printf("\n 잠깐! 신호등이 %d번 바뀔동안 기다린다면 ...... \n %d분 %d초 동안 기다리게 됩니다! \n", change, (change*200/60), change*200&60);
+    if(0 < change && change < 18) {
+        printf("\n 잠깐! 신호등이 %d번 바뀔동안 기다린다면 ...... \n %d분 %d초 동안 기다리게 됩니다! \n", change, (change*200)/60, (change*200)%60);
     } 
-    if(18 < change, change < 432) {
-        printf("\n 잠깐! 신호등이 %d번 바뀔동안 기다린다면 ...... \n %d시간 %d분 %d초 동안 기다리게 됩니다! \n", change,  (change*200/60/60), change*200/60&60, change*200&60);
+    if(18 <= change && change < 432) {
+        printf("\n 잠깐! 신호등이 %d번 바뀔동안 기다린다면 ...... \n %d시간 %d분 %d초 동안 기다리게 됩니다! \n", change,  (change*200/60/60), change*200/60%60, change*200%60);
     }
     if(change >= 432) {
-        printf("\n 잠깐! 신호등이 %d번 바뀔동안 기다린다면 ...... \n %d일 %d시간 %d분 %d초 동안 기다리게 됩니다! \n", change,  (change*200/3600/24), change*200/3600&24, change*200/60&60, change*200&60);
+        printf("\n 잠깐! 신호등이 %d번 바뀔동안 기다린다면 ...... \n %d일 %d시간 %d분 %d초 동안 기다리게 됩니다! \n", change,  ((change*200)/3600)/24, ((change*200)/3600)%24, change*200/60%60, change*200%60);
     }
-    sleep(2);
-    sleep(1);
+    system("PAUSE");
     return 0;
 }
