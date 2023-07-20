@@ -7,78 +7,78 @@
 
 #define i I
 
-// »çÀÎ°ª ±¸ÇÏ±â //
+// ì‚¬ì¸ê°’ êµ¬í•˜ê¸° //
 complex double sin_f(complex double x) {
     complex double result = ((cexp(i * x) - cexp(-i * x)) / (2*i));
     return result;
 }
 
-// °¢ ¹¯°í »çÀÎ°ª Ãâ·Â //
+// ê° ë¬»ê³  ì‚¬ì¸ê°’ ì¶œë ¥ //
 void outputsinz(complex double *z1, complex double *sinz1) {
     double realpart, imagpart = 0;
     int choice1 = 0;
 
-    printf("1. ÆÄÀÌÀÇ °è¼ö·Î ÀÔ·ÂÇÕ´Ï´Ù.\n");
-    printf("2. ÀÏ¹ÝÀûÀÎ ½Ç¼ö·Î ÀÔ·ÂÇÕ´Ï´Ù.\n");
-    printf("¼±ÅÃ: ");
+    printf("1. íŒŒì´ì˜ ê³„ìˆ˜ë¡œ ìž…ë ¥í•©ë‹ˆë‹¤.\n");
+    printf("2. ì¼ë°˜ì ì¸ ì‹¤ìˆ˜ë¡œ ìž…ë ¥í•©ë‹ˆë‹¤.\n");
+    printf("ì„ íƒ: ");
     scanf("%d", &choice1);
 
-    // ½Ç¼ö ºÎºÐ ÀÛ¼º //
+    // ì‹¤ìˆ˜ ë¶€ë¶„ ìž‘ì„± //
     if (choice1 == 1) {
-        printf("ÆÄÀÌÀÇ °è¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+        printf("íŒŒì´ì˜ ê³„ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ");
         scanf("%lf", &realpart);
-        printf("ÀÔ·ÂµÈ °ª: %g¥ð\n", realpart);
+        printf("ìž…ë ¥ëœ ê°’: %gÏ€\n", realpart);
         realpart *= M_PI;
     } else if (choice1 == 2) {
-        printf("ÀÏ¹ÝÀûÀÎ ½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+        printf("ì¼ë°˜ì ì¸ ì‹¤ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ");
         scanf("%lf", &realpart);
-        printf("ÀÔ·ÂµÈ °ª: %g\n", realpart);
+        printf("ìž…ë ¥ëœ ê°’: %g\n", realpart);
     } else {
-        printf("Àß¸øµÈ ¼±ÅÃÀÔ´Ï´Ù.\n");
+        printf("ìž˜ëª»ëœ ì„ íƒìž…ë‹ˆë‹¤.\n");
         getch();
         exit(0);
     }
 
-    // Çã¼ö ºÎºÐ ÀÛ¼º //
+    // í—ˆìˆ˜ ë¶€ë¶„ ìž‘ì„± //
     int choice2 = 0;
-    printf("\nº¹¼Ò¼öÀÇ Çã¼öºÎ¸¦ ÀÔ·ÂÇÏ¼¼¿ä.\n");
-    printf("1. ÆÄÀÌÀÇ °è¼ö·Î ÀÔ·ÂÇÕ´Ï´Ù.\n");
-    printf("2. ÀÏ¹ÝÀûÀÎ ½Ç¼ö·Î ÀÔ·ÂÇÕ´Ï´Ù.\n");
-    printf("¼±ÅÃ: ");
+    printf("\në³µì†Œìˆ˜ì˜ í—ˆìˆ˜ë¶€ë¥¼ ìž…ë ¥í•˜ì„¸ìš”.\n");
+    printf("1. íŒŒì´ì˜ ê³„ìˆ˜ë¡œ ìž…ë ¥í•©ë‹ˆë‹¤.\n");
+    printf("2. ì¼ë°˜ì ì¸ ì‹¤ìˆ˜ë¡œ ìž…ë ¥í•©ë‹ˆë‹¤.\n");
+    printf("ì„ íƒ: ");
     scanf("%d", &choice2);
 
     if (choice2 == 1) {
-        printf("ÆÄÀÌÀÇ °è¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+        printf("íŒŒì´ì˜ ê³„ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ");
         scanf("%lf", &imagpart);
-        printf("ÀÔ·ÂµÈ °ª: %g¥ð\n", imagpart);
+        printf("ìž…ë ¥ëœ ê°’: %gÏ€\n", imagpart);
         imagpart *= M_PI;
     } else if (choice2 == 2) {
-        printf("ÀÏ¹ÝÀûÀÎ ½Ç¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+        printf("ì¼ë°˜ì ì¸ ì‹¤ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ");
         scanf("%lf", &imagpart);
-        printf("ÀÔ·ÂµÈ °ª: %g\n", imagpart);
+        printf("ìž…ë ¥ëœ ê°’: %g\n", imagpart);
     } else {
-        printf("Àß¸øµÈ ¼±ÅÃÀÔ´Ï´Ù.\n");
+        printf("ìž˜ëª»ëœ ì„ íƒìž…ë‹ˆë‹¤.\n");
         getch();
         exit(0);
     }
 
-    // °¢ Ãâ·Â //
+    // ê° ì¶œë ¥ //
     *z1 = realpart + imagpart * i;
     *sinz1 = sin_f(*z1);
 
-    printf("°¢ÀÇ Å©±â: ");
+    printf("ê°ì˜ í¬ê¸°: ");
     if (choice1 == 1) {
-        printf("%.6g¥ð", realpart/M_PI );
+        printf("%.6gÏ€", realpart/M_PI );
     } else {
         printf("%.6g", realpart);
     }
 
     if (choice2 == 1) {
         if (imagpart >= 0) {
-        printf(" + %.6g¥ð i\n", imagpart/M_PI);
+        printf(" + %.6gÏ€ i\n", imagpart/M_PI);
         }
         else {
-        printf(" - %.6g¥ð i\n", -imagpart/M_PI);
+        printf(" - %.6gÏ€ i\n", -imagpart/M_PI);
         }
     } else {
         if (imagpart >= 0) {
@@ -89,7 +89,7 @@ void outputsinz(complex double *z1, complex double *sinz1) {
         }
     }
 
-    // ¿ÀÂ÷ Àâ±â //
+    // ì˜¤ì°¨ ìž¡ê¸° //
     double sin_realpart = creal(*sinz1);
     double sin_imagpart = cimag(*sinz1);
 
@@ -101,22 +101,22 @@ void outputsinz(complex double *z1, complex double *sinz1) {
     } 
 
     if (sin_imagpart >= 0) {
-        printf("ÇØ´ç °¢ÀÇ »çÀÎ°ª: %.6g + %.6g i\n", sin_realpart, sin_imagpart);
+        printf("í•´ë‹¹ ê°ì˜ ì‚¬ì¸ê°’: %.6g + %.6g i\n", sin_realpart, sin_imagpart);
     }
     else {
-        printf("ÇØ´ç °¢ÀÇ »çÀÎ°ª: %.6g - %.6g i\n", sin_realpart, -sin_imagpart);
+        printf("í•´ë‹¹ ê°ì˜ ì‚¬ì¸ê°’: %.6g - %.6g i\n", sin_realpart, -sin_imagpart);
     }
 }
 
 int main() {
     complex double z1, sinz1;
-    printf("Ã¹ ¹øÂ° º¹¼Ò¼ö °¢ÀÇ ½Ç¼öºÎ¸¦ ÀÔ·ÂÇÕ´Ï´Ù.\n");
+    printf("ì²« ë²ˆì§¸ ë³µì†Œìˆ˜ ê°ì˜ ì‹¤ìˆ˜ë¶€ë¥¼ ìž…ë ¥í•©ë‹ˆë‹¤.\n");
     outputsinz(&z1, &sinz1);
 
     printf("\n");
 
     complex double z2, sinz2;
-    printf("µÎ ¹øÂ° º¹¼Ò¼ö °¢ÀÇ ½Ç¼öºÎ¸¦ ÀÔ·ÂÇÕ´Ï´Ù.\n");
+    printf("ë‘ ë²ˆì§¸ ë³µì†Œìˆ˜ ê°ì˜ ì‹¤ìˆ˜ë¶€ë¥¼ ìž…ë ¥í•©ë‹ˆë‹¤.\n");
     outputsinz(&z2, &sinz2);
 
     double realpart_resultsindivide = creal(sinz1/sinz2);
@@ -130,7 +130,7 @@ int main() {
     }
 
 
-    printf("\nÃ¹ ¹øÂ° °¢ÀÌ ºûÀÇ ÀÔ»ç°¢ÀÌ°í, µÎ ¹ø¤Š °¢ÀÌ ºûÀÇ ±¼Àý°¢ÀÏ ¶§\n(Ã¹ ¹ø¤Š ¸ÅÁú¿¡¼­ÀÇ ºûÀÇ ¼Ó·Â) : (µÎ ¹øÂ° ¸ÅÁú¿¡¼­ÀÇ ºûÀÇ ¼Ó·Â) = ");
+    printf("\nì²« ë²ˆì§¸ ê°ì´ ë¹›ì˜ ìž…ì‚¬ê°ì´ê³ , ë‘ ë²ˆì¨° ê°ì´ ë¹›ì˜ êµ´ì ˆê°ì¼ ë•Œ\n(ì²« ë²ˆì¨° ë§¤ì§ˆì—ì„œì˜ ë¹›ì˜ ì†ë ¥) : (ë‘ ë²ˆì§¸ ë§¤ì§ˆì—ì„œì˜ ë¹›ì˜ ì†ë ¥) = ");
     if (imagpart_resultsindivide > 0) {
     printf("%.6g + %.6g i : 1", realpart_resultsindivide, imagpart_resultsindivide);
     } else if (imagpart_resultsindivide == 0) {
