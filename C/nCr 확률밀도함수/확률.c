@@ -3,25 +3,25 @@
 #include <windows.h>
 int main ()
 {
-    /* ¹¯±â */
+    /* ë¬»ê¸° */
     unsigned __int64 A = 1;
     int n = 1;
     double Per = 0.00;
     double SPer = 0.00;
     int MODE = 1;
     double SUM = 0.00;
-    printf("½Ãµµ È½¼ö´Â ¸î ¹øÀ¸·Î ÇÏ½Ã°Ú½À´Ï±î? (60 ÀÌÇÏ¸¦ ±ÇÀåÇÕ´Ï´Ù.)\n¤¤ ");
+    printf("ì‹œë„ íšŸìˆ˜ëŠ” ëª‡ ë²ˆìœ¼ë¡œ í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (60 ì´í•˜ë¥¼ ê¶Œìž¥í•©ë‹ˆë‹¤.)\nã„´ ");
     scanf("%d", &n);
-    printf("\n\nMODE 1 : °æ¿ìÀÇ ¼ö ³ª¿­, 2 : È®·ü ³ª¿­, 3 : È®·ü ³ª¿­ ¹éºÐÀ²·Î ³ªÅ¸³»±â, 4 : ´©Àû ºÐÆ÷ ÇÔ¼ö, 5: ´©Àû ºÐÆ÷ ÇÔ¼ö ¹éºÐÀ²\n¹«½¼ ¸ðµå¸¦ »ç¿ëÇÏ½Ã°Ú½À´Ï±î?\n¤¤ ");
+    printf("\n\nMODE 1 : ê²½ìš°ì˜ ìˆ˜ ë‚˜ì—´, 2 : í™•ë¥  ë‚˜ì—´, 3 : í™•ë¥  ë‚˜ì—´ ë°±ë¶„ìœ¨ë¡œ ë‚˜íƒ€ë‚´ê¸°, 4 : ëˆ„ì  ë¶„í¬ í•¨ìˆ˜, 5: ëˆ„ì  ë¶„í¬ í•¨ìˆ˜ ë°±ë¶„ìœ¨\në¬´ìŠ¨ ëª¨ë“œë¥¼ ì‚¬ìš©í•˜ì‹œê² ìŠµë‹ˆê¹Œ?\nã„´ ");
     scanf("%d", &MODE);
     if(MODE > 1) {
-        printf("\n\n¼º°ø È®·üÀº ¾î¶»°Ô ÇÏ½Ã°Ú½À´Ï±î? (0=<p=<1)\n¤¤ ");
+        printf("\n\nì„±ê³µ í™•ë¥ ì€ ì–´ë–»ê²Œ í•˜ì‹œê² ìŠµë‹ˆê¹Œ? (0=<p=<1)\nã„´ ");
         scanf("%lf", &SPer); 
     }
-    /* MODE 1 : °æ¿ìÀÇ ¼ö ³ª¿­, 2 : È®·ü ³ª¿­, 3 : È®·ü ³ª¿­ ¹éºÐÀ²·Î ³ªÅ¸³»±â, 4 : ´©Àû ºÐÆ÷ ÇÔ¼ö */
+    /* MODE 1 : ê²½ìš°ì˜ ìˆ˜ ë‚˜ì—´, 2 : í™•ë¥  ë‚˜ì—´, 3 : í™•ë¥  ë‚˜ì—´ ë°±ë¶„ìœ¨ë¡œ ë‚˜íƒ€ë‚´ê¸°, 4 : ëˆ„ì  ë¶„í¬ í•¨ìˆ˜ */
     printf("\n\n");
     if(MODE==1){
-        printf("%dC0 = %lld\n", n, A);
+        printf("%dC0 = %lld \n", n, A);
         for(int i=1;i<n+1;i++) {
             A = A * (n+1-i) / i;
             printf("%dC%d = %lld\n",n, i, A);
@@ -51,17 +51,17 @@ int main ()
         for(int i=1;i<n+1;i++) {
             A = A * (n+1-i) / i;
             Per = A*pow(SPer, i)*pow(1-SPer, n-i) + Per;
-            printf("%d¡é Success of %d Trial's Percentage : %.20g\n", i-1, n, Per);
+            printf("%dâ†“ Success of %d Trial's Percentage : %.20g\n", i-1, n, Per);
         }
-        printf("%d¡é Success of %d Trial's Percentage : 1\n", n, n);
+        printf("%dâ†“ Success of %d Trial's Percentage : 1\n", n, n);
     }
     if(MODE==5){
         for(int i=1;i<n+1;i++) {
             A = A * (n+1-i) / i;
             Per = A*pow(SPer, i)*pow(1-SPer, n-i) + Per;
-            printf("%d¡é Success of %d Trial's Percentage : %.20g%%\n", i-1, n, Per*100);
+            printf("%dâ†“ Success of %d Trial's Percentage : %.20g%%\n", i-1, n, Per*100);
         }
-        printf("%d¡é Success of %d Trial's Percentage : 100%%\n", n, n);
+        printf("%dâ†“ Success of %d Trial's Percentage : 100%%\n", n, n);
     }
 printf("\n");
 system("pause");

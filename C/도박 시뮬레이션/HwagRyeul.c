@@ -6,18 +6,18 @@
 int main()
 {
     double percen = 0;
+    double success;
     int random = 0;
     double reward = 0;
-    double success = 0;
-    double PerPer = 0; // ±âÁØ ÆÛ¼¾Æ® //
-    printf("ÀüÃ¼ ±İ¾×¿¡¼­ º£ÆÃÇÒ ºñÀ²À» °Å½Ç Áö °ñ¶óÁÖ¼¼¿ä (0 < x < 1, ¼Ò¼ö ´Ù¼¸ ¹øÂ° ÀÚ¸®±îÁö¸¸)\n");
-    scanf("%f", &percen);
-    printf("¹èÀ²À» Àû¾îÁÖ¼¼¿ä. (n¹è¸¦ ÀûÀ» ½Ã, È®·üÀÌ ¸ÂÀ» °æ¿ì n¹è ÀÌµæÀÔ´Ï´Ù. ¼Ò¼ö ´Ù¼¸ ¹øÂ° ÀÚ¸®±îÁö¸¸\n");
-    scanf("%f", &reward);
-    printf("¼º°ø È®·üÀ» Àû¾îÁÖ¼¼¿ä. (0 < x < 1, ¼Ò¼ö ´Ù¼¸ ¹øÂ° ÀÚ¸®±îÁö¸¸)\n");
-    scanf("%f", &PerPer);
+    double PerPer = 0; // ê¸°ì¤€ í¼ì„¼íŠ¸ //
+    printf("ì „ì²´ ê¸ˆì•¡ì—ì„œ ë² íŒ…í•  ë¹„ìœ¨ì„ ê±°ì‹¤ ì§€ ê³¨ë¼ì£¼ì„¸ìš” (0 < x < 1, ì†Œìˆ˜ ë‹¤ì„¯ ë²ˆì§¸ ìë¦¬ê¹Œì§€ë§Œ)\n");
+    scanf("%g", &percen);
+    printf("ë°°ìœ¨ì„ ì ì–´ì£¼ì„¸ìš”. (në°°ë¥¼ ì ì„ ì‹œ, í™•ë¥ ì´ ë§ì„ ê²½ìš° në°° ì´ë“ì…ë‹ˆë‹¤. ì†Œìˆ˜ ë‹¤ì„¯ ë²ˆì§¸ ìë¦¬ê¹Œì§€ë§Œ\n");
+    scanf("%g", &reward);
+    printf("ì„±ê³µ í™•ë¥ ì„ ì ì–´ì£¼ì„¸ìš”. (0 < x < 1, ì†Œìˆ˜ ë‹¤ì„¯ ë²ˆì§¸ ìë¦¬ê¹Œì§€ë§Œ)\n");
+    scanf("%g", &PerPer);
     PerPer = PerPer + 100;
-    printf("%d",PerPer);
+    printf("%g",PerPer);
     success = PerPer;
     sleep(3);
     srand(time(NULL));
@@ -34,10 +34,10 @@ int main()
             money = money * (1 - percen);
         }
         }
-        printf("%d¹øÂ° ½Ãµµ, ÃÑ °á°ú : %f, ÀÌµæ ¹èÀ² : %f%% \n", j+1, money, money/100);
+        printf("%dë²ˆì§¸ ì‹œë„, ì´ ê²°ê³¼ : %f, ì´ë“ ë°°ìœ¨ : %f%% \n", j+1, money, money/100);
         sum = sum + money * 10000;
     }
     sum = sum / 100000000;
-    printf("Æò±Õ ºñÀ² : %f %%",sum);
+    printf("í‰ê·  ë¹„ìœ¨ : %f %%",sum);
     system("PAUSE");
 }
